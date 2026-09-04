@@ -1,0 +1,8 @@
+# .github/workflows/ci.yml — Labo 20 : à compléter (consigne 6).
+# TODO : déclencheur push + pull_request
+# TODO : job test sur ubuntu-latest, matrice python-version 3.11 / 3.12 / 3.13
+# TODO : étapes : checkout, setup-python, pip install -e ".[dev]", ruff check,
+#        ruff format --check, mypy src, pytest
+name: CI
+on: [push]
+jobs: {}

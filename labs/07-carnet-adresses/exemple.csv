@@ -1,0 +1,4 @@
+nom,ip,role,ports
+web01,10.0.0.1,web,22;80;443
+db01,10.0.0.2,base,22;5432
+cache01,10.0.0.3,cache,22;6379

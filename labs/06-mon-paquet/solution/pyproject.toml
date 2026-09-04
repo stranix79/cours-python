@@ -1,0 +1,35 @@
+# pyproject.toml — Labo 06 (solution) : la carte d'identité du paquet.
+#
+# Format TOML, standardisé par la PEP 621. C'est ce fichier que lit
+# `pip install .` (ou `pip install -e .`) pour savoir QUOI installer
+# (nom, version, dépendances) et COMMENT (le build backend).
+# Il remplace l'ancien setup.py, que tu croiseras encore dans les vieux projets.
+
+[build-system]
+# L'outil qui transforme ce dossier en paquet installable (un .whl, chapitre 20).
+# pip l'installe tout seul dans un environnement temporaire le temps du build :
+# pas besoin de l'avoir dans le .venv.
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "outils"                      # le nom pour pip (pip install outils, pip show outils)
+version = "0.1.0"                    # sémantique : MAJEUR.MINEUR.CORRECTIF
+description = "Boîte à outils DevOps du cours Python"
+requires-python = ">=3.11"           # pip refuse d'installer sur un Python plus vieux
+dependencies = []                    # rien : bibliothèque standard seulement.
+                                     # Sinon : ["requests>=2.32", "rich"]
+
+[project.scripts]
+# Crée un exécutable `outils` dans .venv/bin/ qui appelle outils.cli:main().
+# Syntaxe : nom_de_la_commande = "module.chemin:fonction"
+outils = "outils.cli:main"
+
+[project.optional-dependencies]
+# Dépendances facultatives, installées avec  pip install -e ".[dev]"
+dev = ["pytest"]
+
+[tool.setuptools]
+# On nomme explicitement le paquet : sans ça setuptools scanne le dossier
+# et peut embarquer n'importe quel sous-dossier contenant un __init__.py.
+packages = ["outils"]

@@ -1,0 +1,20 @@
+# docker-compose.yml — Labo 19 : l'API et sa base, en une commande.
+#   docker compose up --build
+#   curl localhost:8000/health
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # En vrai : un fichier .env non commité, ou les secrets de l'orchestrateur.
+      TICKETS_SECRET_KEY: ${TICKETS_SECRET_KEY:-change-moi-avec-secrets-token-hex-32-0000}
+      TICKETS_ADMIN_PASSWORD: ${TICKETS_ADMIN_PASSWORD:-admin-a-changer}
+      TICKETS_TOKEN_MINUTES: "120"
+    volumes:
+      # Volume nommé : la base survit à `docker compose down` (pas à `down -v`).
+      - tickets-data:/data
+    restart: unless-stopped
+
+volumes:
+  tickets-data:

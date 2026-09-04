@@ -1,0 +1,6 @@
+{
+  "service": "api-facturation",
+  "port": 8443,
+  "image": "registry.stranix.net/api-facturation:2.4.1",
+  "replicas": 3,
+}

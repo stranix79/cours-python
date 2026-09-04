@@ -1,0 +1,10 @@
+[
+  {"nom": "web-01", "ip": "10.0.0.11", "os": "debian", "cpu": 4,
+   "services": [{"nom": "nginx", "port": 443}, {"nom": "sshd", "port": 22}]},
+  {"nom": "web-02", "ip": "10.0.0.12", "os": "debian", "cpu": 4,
+   "services": [{"nom": "nginx", "port": 443}, {"nom": "sshd", "port": 22}]},
+  {"nom": "db-01", "ip": "10.0.0.21", "os": "ubuntu", "cpu": 16,
+   "services": [{"nom": "postgres", "port": 5432}, {"nom": "sshd", "port": 22}]},
+  {"nom": "bastion", "ip": "10.0.0.2", "os": "alpine", "cpu": 1,
+   "services": [{"nom": "sshd", "port": 22}]}
+]

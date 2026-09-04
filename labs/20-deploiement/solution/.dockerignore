@@ -1,0 +1,11 @@
+# Ce qui ne part PAS dans le contexte de build : le .venv local (des centaines
+# de Mo), git, les caches, les tests (inutiles dans l'image finale).
+.venv
+.git
+__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+dist
+tests

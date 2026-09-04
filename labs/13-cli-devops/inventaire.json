@@ -1,0 +1,9 @@
+{
+  "serveurs": [
+    {"nom": "web1", "hote": "127.0.0.1", "groupe": "web", "os": "debian12", "tags": ["nginx", "public"]},
+    {"nom": "web2", "hote": "localhost", "groupe": "web", "os": "debian12", "tags": ["nginx"]},
+    {"nom": "db1", "hote": "192.0.2.10", "groupe": "db", "os": "ubuntu24", "tags": ["postgres", "critique"]},
+    {"nom": "monitor", "hote": "192.0.2.20", "groupe": "ops", "os": "alpine", "tags": ["grafana", "prometheus"]},
+    {"nom": "bastion", "hote": "hote.invalide.example", "groupe": "ops", "os": "debian12", "tags": ["ssh"]}
+  ]
+}

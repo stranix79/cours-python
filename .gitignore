@@ -1,0 +1,19 @@
+# Environnement virtuel du cours (recréé avec python3 -m venv .venv)
+.venv/
+# Caches Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Bases SQLite créées par les labos
+*.db
+*.sqlite3
+# Paquets construits (chapitre 20)
+dist/
+build/
+*.egg-info/
+# macOS
+.DS_Store
+# Secrets locaux des labos (chapitre 19)
+.env

@@ -1,0 +1,15 @@
+# docker-compose.yml — Labo 21 (solution) : statusboard + un volume pour la base.
+services:
+  statusboard:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      STATUSBOARD_SECRET_KEY: ${STATUSBOARD_SECRET_KEY:-change-moi}
+      STATUSBOARD_ADMIN_PASSWORD: ${STATUSBOARD_ADMIN_PASSWORD:-admin}
+      STATUSBOARD_INTERVAL_S: "30"
+    volumes:
+      - data:/data
+    restart: unless-stopped
+volumes:
+  data:

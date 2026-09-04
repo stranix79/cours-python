@@ -1,0 +1,16 @@
+# pyproject.toml — Labo 20 : à compléter (consigne 4).
+# TODO : [build-system] avec hatchling
+# TODO : [project] complet : description, readme, license, requires-python, authors,
+#        dependencies (vide : stdlib seulement), optional-dependencies dev
+# TODO : [project.scripts] : outils = "outils.cli:main"
+# TODO : [tool.ruff], [tool.ruff.lint] (select E, W, F, I, UP, B, SIM)
+# TODO : [tool.mypy] strict
+# TODO : [tool.pytest.ini_options] testpaths = ["tests"]
+
+[project]
+name = "outils"
+version = "0.1.0"
+
+# Déjà là pour que `pytest` lancé ici ne ramasse pas aussi solution/tests/.
+[tool.pytest.ini_options]
+testpaths = ["tests"]

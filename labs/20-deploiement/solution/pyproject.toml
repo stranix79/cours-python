@@ -1,0 +1,47 @@
+# pyproject.toml — Labo 20 (solution) : LE fichier de configuration du projet.
+# Trois familles de sections : comment construire ([build-system]), quoi
+# ([project], standard PEP 621, lu par pip, uv, hatch…), et la config de chaque
+# outil ([tool.*]).
+
+[build-system]
+requires = ["hatchling"]              # installé dans un venv temporaire par `python -m build`
+build-backend = "hatchling.build"
+
+[project]
+name = "outils"
+version = "0.1.0"                     # la seule source de vérité du numéro (semver)
+description = "Petits utilitaires dates et réseau"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "stranix" }]
+dependencies = []                     # stdlib seulement : rien à installer pour tourner
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11", "build>=1.2"]
+
+[project.scripts]
+# Crée un exécutable `outils` dans le bin/ du venv qui appelle outils.cli:main().
+outils = "outils.cli:main"
+
+# hatchling trouve tout seul src/outils/ grâce au nom du projet ; on l'écrit
+# quand même pour que ce soit explicite.
+[tool.hatch.build.targets.wheel]
+packages = ["src/outils"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]                     # la longueur de ligne, c'est `ruff format` qui gère
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

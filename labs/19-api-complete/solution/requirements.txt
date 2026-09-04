@@ -1,0 +1,9 @@
+# Dépendances de l'image Docker : seulement ce dont l'API a besoin pour tourner
+# (pas pytest, pas ruff). Versions figées = image reproductible.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlmodel>=0.0.22
+pydantic-settings>=2.5
+python-multipart>=0.0.9
+pyjwt>=2.9
+bcrypt>=4.1

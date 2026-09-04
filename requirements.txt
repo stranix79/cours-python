@@ -1,0 +1,22 @@
+# Tout ce qu'il faut pour les 22 labos, installé d'un coup :
+#   python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+# Les premiers labos n'utilisent que la bibliothèque standard ; le reste sert
+# à partir du chapitre 12 (tests) et surtout 14 à 20 (HTTP, FastAPI, BDD, qualité).
+pytest>=8            # chapitre 12 : tests
+pytest-asyncio>=0.24 # chapitre 15 : tester du code async
+httpx>=0.27          # chapitre 14 et 15 : client HTTP sync + async
+httpx2>=2.0          # chapitre 17 : le TestClient de FastAPI/Starlette 1.6+ s'appuie dessus
+requests>=2.32       # chapitre 14 : le client HTTP historique
+rich>=13             # chapitre 13 : tableaux et couleurs dans le terminal
+typer>=0.12          # chapitre 13 : outils en ligne de commande
+fastapi>=0.115       # chapitres 17 et 19
+uvicorn[standard]>=0.30 # le serveur qui fait tourner FastAPI
+python-multipart>=0.0.9 # formulaires (login OAuth2 du chapitre 19)
+pydantic-settings>=2.5 # chapitre 19 : configuration par variables d'environnement et .env
+sqlmodel>=0.0.22     # chapitre 18 : SQLAlchemy + pydantic
+pyjwt>=2.9            # chapitre 19 : jetons JWT (celui que la doc FastAPI utilise)
+bcrypt>=4.1          # chapitre 19 : hachage des mots de passe (passlib ne suit plus bcrypt 4+)
+ruff>=0.6            # chapitre 20 : linter + formateur
+mypy>=1.11           # chapitre 20 : vérification des types
+build>=1.2            # chapitre 20 : python -m build → wheel + sdist
+hatchling>=1.25       # chapitre 20 : le backend de build utilisé par pyproject.toml

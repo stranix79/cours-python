@@ -1,0 +1,8 @@
+# Ce qui ne doit PAS entrer dans l'image (ni dans le contexte envoyé au démon).
+.venv
+__pycache__
+*.pyc
+*.db
+.env
+.pytest_cache
+tests

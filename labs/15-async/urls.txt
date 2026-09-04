@@ -1,0 +1,22 @@
+# urls.txt — Labo 15 : une URL par ligne, # pour commenter.
+# Lance d'abord : python3 serveur_lent.py
+http://127.0.0.1:8000/site/1
+http://127.0.0.1:8000/site/2
+http://127.0.0.1:8000/site/3
+http://127.0.0.1:8000/site/4
+http://127.0.0.1:8000/site/5
+http://127.0.0.1:8000/site/6
+http://127.0.0.1:8000/site/7
+http://127.0.0.1:8000/site/8
+http://127.0.0.1:8000/site/9
+http://127.0.0.1:8000/site/10
+http://127.0.0.1:8000/site/11
+http://127.0.0.1:8000/site/12
+http://127.0.0.1:8000/site/13
+http://127.0.0.1:8000/site/14
+http://127.0.0.1:8000/site/15
+http://127.0.0.1:8000/site/16
+http://127.0.0.1:8000/site/17
+http://127.0.0.1:8000/site/18
+http://127.0.0.1:8000/erreur
+http://127.0.0.1:9/ferme

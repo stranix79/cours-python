@@ -1,0 +1,22 @@
+# pyproject.toml — Labo 06 : la carte d'identité du paquet (PEP 621).
+# C'est ce fichier que lit `pip install .` pour savoir quoi installer et comment.
+
+[build-system]
+# L'outil qui transforme le dossier en paquet installable. setuptools est
+# le classique ; hatchling et flit sont plus récents et plus simples.
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# TODO : name = "outils", version = "0.1.0", description = "...",
+#        requires-python = ">=3.11", dependencies = []  (aucune : stdlib seulement)
+name = "outils"
+version = "0.0.0"
+
+# TODO : [project.scripts] → une entrée  outils = "outils.cli:main"
+#        Syntaxe : nom_commande = "module.chemin:fonction"
+
+[tool.setuptools]
+# Dit à setuptools quel dossier est le paquet (sinon il devine, et se trompe
+# parfois quand il y a un dossier solution/ à côté).
+packages = ["outils"]

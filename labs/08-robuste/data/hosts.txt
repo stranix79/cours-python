@@ -1,0 +1,6 @@
+# Un hôte par ligne, les lignes vides et les commentaires sont ignorés
+web-01.stranix.net
+web-02.stranix.net
+
+# ancien serveur, à retirer un jour
+web-03.stranix.net

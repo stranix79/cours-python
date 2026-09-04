@@ -1,0 +1,4 @@
+{
+  "service": "api-facturation",
+  "image": "registry.stranix.net/api-facturation:2.4.1"
+}

@@ -1,0 +1,3 @@
+# docker-compose.yml — Labo 21 : à écrire (jalon 6) : le service, ses variables
+# d'environnement STATUSBOARD_*, un volume monté sur /data.
+services: {}
