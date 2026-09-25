@@ -7,6 +7,8 @@ stranix · le renard qui aime savoir ce qui se passe sous le capot
 $ cat cours-python/README.md
 ```
 
+Un cours en français, par **Gilles Fauvie** ([stranix.net](https://stranix.net)).
+
 Tu as déjà codé. Du C, du BASIC sur un Commodore 64, un peu de Java, un peu de Python copié-collé qui marche sans que tu saches trop pourquoi. Tu n'as pas besoin qu'on t'explique ce qu'est une boucle. Tu as besoin qu'on t'explique **ce que Python fait différemment**, pourquoi, et comment on s'en sert aujourd'hui pour écrire des scripts, des outils en ligne de commande et des API web.
 
 Ce dépôt est un cours **qui part de zéro** mais qui ne traîne pas : chaque notion est comparée à ce que tu connais déjà (C, Java, BASIC), et on va jusqu'à des sujets qu'on ne trouve pas dans les tutos pour débutants : ce qui se passe sous le capot (références, GIL, bytecode), l'asynchrone, les web services (REST, SOAP, GraphQL, gRPC, WebSocket… et pourquoi ils existent), FastAPI, les bases de données, les tests, l'empaquetage et le déploiement en Docker.
@@ -76,6 +78,21 @@ python3 solution/hello.py       # la version corrigée, commentée
 Parce que les cours Python en français s'arrêtent trop souvent à la boucle `for`, et que ceux qui vont jusqu'à FastAPI supposent que tu as déjà tout le reste. Ici, on part de zéro, on compare à ce que tu connais (C, Java, BASIC), et on va jusqu'au bout : une API en production dans un conteneur.
 
 Licence MIT. Le cours est vivant : une erreur, une question, une idée de labo, ouvre une issue. On en parle aussi sur [stranix.net](https://stranix.net).
+
+## Du même auteur
+
+Les autres cours, même esprit :
+
+- [cours-go](https://github.com/stranix79/cours-go) : Go de zéro à la prod, même format, même public.
+- [asm-m1](https://github.com/stranix79/asm-m1) : l'assembleur ARM64 sur Mac Apple Silicon, pour voir ce qu'il y a sous le capot.
+
+Et le reste :
+
+- [stranix.net](https://stranix.net) : le blog, où l'on parle de ce genre de choses.
+- [Deckhand](https://deckhand.show) : des présentations HTML écrites en Markdown.
+- [Chutag](https://chutag.stranix.net) : des tags QR pour retrouver ses objets perdus (bêta).
+- [apps.stranix.net](https://apps.stranix.net) : les apps macOS de Stranix.
+- [CODE79](https://code79.com) : l'atelier devops derrière tout ça.
 
 ```
 $ ls /ventures
