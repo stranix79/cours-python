@@ -85,6 +85,7 @@ Les autres cours, même esprit :
 
 - [cours-go](https://github.com/stranix79/cours-go) : Go de zéro à la prod, même format, même public.
 - [asm-m1](https://github.com/stranix79/asm-m1) : l'assembleur ARM64 sur Mac Apple Silicon, pour voir ce qu'il y a sous le capot.
+- [cours-rust](https://github.com/stranix79/cours-rust) : Rust de zéro à la prod, même format, même public, avec un encadré « Venant de Go » à chaque notion.
 
 Et le reste :
 
